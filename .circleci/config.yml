@@ -57,6 +57,9 @@ jobs:
       - store_artifacts:
           path: ./app/build/outputs
           destination: build
+      
+      - store_test_results:
+          path: test-results
 
       - deploy:
           command: |
