@@ -40,8 +40,8 @@ jobs:
           key: v1-dependencies-{{ checksum "build.gradle" }}
         
       - store_artifacts:
-          path: /tmp/artifacts
-          destination: ./app/build
+          path: ./app/build
+          destination: build
 
       # run tests!
       - run: 
