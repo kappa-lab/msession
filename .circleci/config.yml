@@ -47,5 +47,5 @@ jobs:
       # run build
       - run: 
           name: gradle build
-          command: ./gradlew assembleDebug
+          command: ./gradl assembleDebug
 
