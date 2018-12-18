@@ -39,10 +39,6 @@ jobs:
             - ~/.gradle
           key: v1-dependencies-{{ checksum "build.gradle" }}
         
-      - store_artifacts:
-          path: ./app/build
-          destination: build
-
       # run tests!
       - run: 
           name: gradle test
@@ -53,3 +49,6 @@ jobs:
           name: gradle build
           command: ./gradlew assembleDebug
 
+      - store_artifacts:
+          path: ./app/build
+          destination: build
